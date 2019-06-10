@@ -1,0 +1,20 @@
+clear
+apt update && upgrade
+pkg install root-repo
+pkg install unstable-repo
+pkg install x11-repo
+pkg install python
+pkg install python2
+pkg install git
+pkg install wget
+pkg install ruby
+pkg install openssh
+pkg install curl
+curl -LO https://raw.githubusercontent.com/Hax4us/Metasploit_termux/master/metasploit.sh
+chmod 777 metasploit.sh
+bash metasploit.sh
+pkg install metasploit
+cd metasploit-framework
+gem install bundle
+bundle install
+bundle update nokogiri
