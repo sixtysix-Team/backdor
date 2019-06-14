@@ -25,7 +25,7 @@ read -p "y/n :" pill;
 if [ $pill = "y" ]; then
         bash install
         clear
-        figlet Sadap HP | lolcat
+        figlet Backdor | lolcat
         echo ""
         echo "=========================================" |lolcat
         echo "===== gunakan tools ini dengan baik =====" |lolcat
