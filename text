@@ -19,6 +19,7 @@ echo ""
 echo "=========================================" |lolcat
 echo "===== gunakan tools ini dengan baik =====" |lolcat
 echo "=========================================" |lolcat
+echo "Update script : https://github.com/sixtysix-Team/phoneploits" | lolcat
 echo ""
 echo "Install Metasploit ?" |lolcat
 read -p "y/n :" pill;
